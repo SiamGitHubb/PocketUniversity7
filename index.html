@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pocket University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                950: '#2E5077', // Navy - Deep Backgrounds
+                900: '#2E5077', // Navy - Panel Backgrounds
+                800: '#4DA1A9', // Teal - Used for card tints/borders
+                700: '#4DA1A9', // Teal - Borders
+                600: '#4DA1A9', // Teal - Muted Text / Icons
+                500: '#4DA1A9', // Teal - Primary Action
+                400: '#79D7BE', // Mint - Highlights / Hover
+                300: '#79D7BE', // Mint - Accents
+                200: '#F6F4F0', // Cream - Light Text
+                100: '#F6F4F0', // Cream - Base Text
+                50:  '#F6F4F0', // Cream - Brightest Text
+              },
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #2E5077; /* brand-950 */
+        color: #F6F4F0; /* brand-50 */
+      }
+      .glass-panel {
+        background: rgba(46, 80, 119, 0.6); /* Navy with opacity */
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(77, 161, 169, 0.3); /* Teal with low opacity */
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(46, 80, 119, 0.5); /* Navy */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4DA1A9; /* Teal */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #79D7BE; /* Mint */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
